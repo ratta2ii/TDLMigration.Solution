@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+@model TDLMigration.Models.Category
+
+<h4>Add a new category</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.CategoryName)
+    @Html.TextBoxFor(model => model.CategoryName)
+    <input type="submit" value="Add new category" />
+}
+<p>@Html.ActionLink("Show all categories", "Index")</p>
